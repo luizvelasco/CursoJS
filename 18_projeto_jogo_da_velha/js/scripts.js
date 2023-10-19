@@ -279,8 +279,8 @@ function declareWinner(winner) {
 function computerplay() {
 
     let cloneO = o.cloneNode(true); 
+    let preechido = 0;;
     counter = 0;
-    filled = 0;;
 
     for (let i = 0; i < boxes.length; i ++) {
 
@@ -294,12 +294,12 @@ function computerplay() {
                 break;
         // checagem  de quantas estão preenchidas
             } else {
-                filled ++;
+                preechido ++;
             }   
         }
     }
     
-    if (counter == 0 && filled < 9) {
+    if (counter == 0 && preechido < 9) {
         computerplay();
     }
 }
