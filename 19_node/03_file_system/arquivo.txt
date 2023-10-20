@@ -1,1 +1,1 @@
-algum texto
+Texto por writeFile
