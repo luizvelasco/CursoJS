@@ -5,6 +5,25 @@ let buttons = document.querySelectorAll("#buttons-container button");
 let messageContainer = document.querySelector("#message");
 let messageText = document.querySelector("#message p");
 let secondPlayer;
+let resetButton = document.querySelector("#reset-button");
+
+// Limpando o tabuleiro com a ação do botão 
+resetButton.addEventListener("click", function() {
+
+    for (let i = 0; i < boxes.length; i++) {
+        if (boxes[i].childNodes.length > 0) {
+            boxes[i].removeChild(boxes[i].childNodes[0]);
+        }
+    }
+
+    // Reiniciar as contagens de jogadores
+    player1 = 0;
+    player2 = 0;
+
+    // Esconder a mensagem
+    messageContainer.classList.add("hide");
+});
+
 
 // contador de jogadas
 let player1 = 0;
